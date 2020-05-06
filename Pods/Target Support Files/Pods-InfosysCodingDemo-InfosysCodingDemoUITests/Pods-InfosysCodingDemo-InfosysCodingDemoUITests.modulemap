@@ -1,0 +1,6 @@
+framework module Pods_InfosysCodingDemo_InfosysCodingDemoUITests {
+  umbrella header "Pods-InfosysCodingDemo-InfosysCodingDemoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
