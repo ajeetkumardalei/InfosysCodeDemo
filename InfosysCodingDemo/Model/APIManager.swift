@@ -2,7 +2,6 @@
 
 import Foundation
 import SystemConfiguration
-import Alamofire
 
 
 

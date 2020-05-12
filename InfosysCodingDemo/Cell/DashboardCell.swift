@@ -16,8 +16,8 @@ class DashboardCell: UITableViewCell {
     }
     
     func configureCell(with item:Row) {
-        nameLabel.text = item.title ?? "Not Available"
-        jobTitleDetailedLabel.text = item.description ?? "Not Available"
+        nameLabel.text = item.title
+        jobTitleDetailedLabel.text = item.description 
         
         if let strImgURL = item.imageHref {
             profileImageView.setImageFromAlmofireURL(strImgURL: strImgURL, isShowIndicator: true, placeholderimg: Placeholder.noImage, completionHandler: { (isSuccess) in
@@ -43,6 +43,7 @@ class DashboardCell: UITableViewCell {
             let profileImageView:UIImageView = {
                 let img = UIImageView()
                 img.contentMode = .scaleAspectFill
+                img.backgroundColor = .clear
                 img.translatesAutoresizingMaskIntoConstraints = false
                 img.clipsToBounds = true
                 img.isUserInteractionEnabled = true
@@ -55,6 +56,7 @@ class DashboardCell: UITableViewCell {
                 let label = UILabel()
                 label.font = UIFont.boldSystemFont(ofSize: 20)
                 label.textColor = .black
+                label.backgroundColor = .clear
                 label.translatesAutoresizingMaskIntoConstraints = false
                 label.lineBreakMode = NSLineBreakMode.byWordWrapping
                 label.numberOfLines = 0
@@ -65,7 +67,7 @@ class DashboardCell: UITableViewCell {
                 let label = UILabel()
                 label.font = UIFont.boldSystemFont(ofSize: 14)
                 label.textColor =  .darkGray
-                label.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                label.backgroundColor = .clear
                 label.layer.cornerRadius = 5
                 label.clipsToBounds = true
                 label.translatesAutoresizingMaskIntoConstraints = false
